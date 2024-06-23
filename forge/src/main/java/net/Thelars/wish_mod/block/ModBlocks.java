@@ -16,8 +16,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-
-
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, wish_mod.MOD_ID);
@@ -27,18 +25,8 @@ public class ModBlocks {
                 .strength(0.5f)
                 .sound(SoundType.AMETHYST)
                 .noOcclusion()
-                .requiresCorrectToolForDrops())); // This makes it require a shovel
+                .requiresCorrectToolForDrops())); 
 
-
-
-
-
-    //this will add a new block to the registry just copy and uncomment
-    //public static final RegistryObject<Block> thisiswhereyouputyournewblocknamenospacesnocaps = registerBlock("thisiswhereyouputyournewblocknamenospacesnocaps",
-    //      ()-> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.AMETHYST)));
-
-
-    //evey thing down form here should not chang I think
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
