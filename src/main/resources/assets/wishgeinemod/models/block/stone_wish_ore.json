@@ -1,0 +1,33 @@
+{  "parent": "minecraft:block/block",
+    "textures": {
+      "particle": "block/stonewishore",
+      "down": "block/stone_wish_ore_top"
+
+  },
+  "elements": [
+    {   "from": [ 0, 0, 0 ],
+      "to": [ 16, 16, 16 ],
+      "faces": {
+        "down":  { "texture": "#down", "cullface": "down" },
+        "up":    { "texture": "#down", "cullface": "up" },
+        "north": { "texture": "#down", "cullface": "north" },
+        "south": { "texture": "#down", "cullface": "south" },
+        "west":  { "texture": "#down", "cullface": "west" },
+        "east":  { "texture": "#down", "cullface": "east" }
+      }
+    },
+    {
+      "name": "inside",
+      "from": [1, 1, 1],
+      "to": [15, 15, 15],
+      "faces": {
+        "north": {"uv": [3.5, 3.5, 7, 7], "texture": "#north"},
+        "east": {"uv": [0, 3.5, 3.5, 7], "texture": "#east"},
+        "south": {"uv": [10.5, 3.5, 14, 7], "texture": "#south"},
+        "west": {"uv": [7, 3.5, 10.5, 7], "texture": "#west"},
+        "up": {"uv": [7, 3.5, 3.5, 0], "texture": "#up"},
+        "down": {"uv": [10.5, 0, 7, 3.5], "texture": "#down"}
+      }
+    }
+  ]
+}
